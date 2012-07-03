@@ -49,8 +49,13 @@ $(function () {
 			$("#results").fadeIn(250);
 			clearTimeout(progressTracker);
 			$progressBar.addClass("done").css("width", 0);
-		}).error(function () {
-			$("#alert-error").fadeIn(250);
+		}).fail(function (jqXhr) {
+			if (jqXhr.status === 404) {
+				$("#alert-not-found").fadeIn(250);
+			} else {
+				$("#alert-error").fadeIn(250);
+			}
+
 			clearTimeout(progressTracker);
 			$progressBar.addClass("done").css("width", 0);
 		});

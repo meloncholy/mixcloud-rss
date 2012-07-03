@@ -37,9 +37,9 @@ var feed = function () {
 			console.error("fetchCloudcasts:", error);
 
 			if (error.message === "HTTP status 404") {
-				stuff.res.render("error", { message: "Sorry, that account doesn&rsquo;t seem to exist. Could you check you&rsquo;ve got it right?", settings: settings });
+				stuff.res.render("error", { status: 404, message: "Sorry, that account doesn&rsquo;t seem to exist. Could you check you&rsquo;ve got it right?", settings: settings });
 			} else {
-				stuff.res.render("error", { message: error.message, settings: settings });
+				stuff.res.render("error", { status: 500, message: error.message, settings: settings });
 			}
 			return;
 		}
@@ -78,7 +78,7 @@ var feed = function () {
 
 		if (error) {
 			console.error("renderFeed:", error);
-			stuff.res.render("error", { message: error.message, settings: settings });
+			stuff.res.render("error", { status: 500, message: error.message, settings: settings });
 			return;
 		}
 
@@ -115,9 +115,9 @@ var feed = function () {
 			console.error("fetchCloudcastTest:", error);
 
 			if (error.message === "HTTP status 404") {
-				stuff.res.json({ error: "Sorry, that account doesn&rsquo;t seem to exist. Could you check you&rsquo;ve got it right?" });
+				stuff.res.json({ error: "Sorry, that account doesn&rsquo;t seem to exist. Could you check you&rsquo;ve got it right?" }, 404);
 			} else {
-				stuff.res.json({ error: error.message });
+				stuff.res.json({ error: error.message }, 500);
 			}
 			return;
 		}
@@ -138,7 +138,7 @@ var feed = function () {
 	function renderTest(stuff, info, error, result) {
 		if (error) {
 			console.error("renderTest:", error);
-			stuff.res.json({ error: error.message });
+			stuff.res.json({ error: error.message }, 500);
 			return;
 		}
 
