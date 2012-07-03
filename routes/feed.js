@@ -47,7 +47,7 @@ var feed = function () {
 		var cloudcasts = result.data;
 		var cloudcastUrl = settings.cloudcastOembedUrl;
 		// Skip "\'s Cloudcasts"
-		var author = result.name.slice(0, -13);
+		var author = sanitize(result.name).xss().slice(0, -13);
 
 		stuff.length = cloudcasts.length;
 		stuff.count = 0;
@@ -84,7 +84,7 @@ var feed = function () {
 
 		// Add post to feed.
 		stuff.feed.item({
-			title: result.title,
+			title: sanitize(result.title).xss(),
 			description: result.html,
 			url: info.url,
 			author: result.author_name,
@@ -125,7 +125,7 @@ var feed = function () {
 		var cloudcasts = result.data;
 		var cloudcastUrl = settings.cloudcastOembedUrl;
 		// Skip "\'s Cloudcasts"
-		var author = result.name.slice(0, -13);
+		var author = sanitize(result.name).xss().slice(0, -13);
 
 		if (cloudcasts.length === 0) {
 			stuff.res.json({ author: author, title: "Nothing to see here", html: "<p>Hmmm&hellip; Looks like " + author + " hasn&rsquo;t put up any Cloudcasts yet. You can still subscribe and get them when they appear.</p>" });
@@ -142,7 +142,7 @@ var feed = function () {
 			return;
 		}
 
-		stuff.res.json({ author: info.author, title: result.title, html: result.html });
+		stuff.res.json({ author: info.author, title: sanitize(result.title).xss(), html: result.html });
 	}
 
 	return exports;
