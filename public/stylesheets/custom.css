@@ -1,0 +1,135 @@
+/*!
+* MixCloud RSS Converter
+*
+* @package    MixCloudRSS
+* @subpackage public.stylesheets.custom
+* @copyright  Copyright (c) 2012 Andrew Weeks http://meloncholy.com
+* @license    MIT licence. See http://meloncholy.com/licence for details.
+* @version    0.1.0
+*/
+
+body { 
+	background-color: #fff; 
+	padding-top: 90px; 
+	position: relative; 
+}
+
+/* Jumbotrons
+-------------------------------------------------- */
+.jumbotron {
+	position: relative;
+}
+
+.jumbotron h1 {
+	margin-bottom: 9px;
+	font-size: 81px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	line-height: 1;
+}
+
+.jumbotron p {
+	margin-bottom: 32px;
+	font-weight: 300;
+}
+
+.jumbotron .btn-large {
+	font-size: 20px;
+	font-weight: normal;
+	padding: 14px 24px;
+	margin: -8px 10px 0 10px;
+	-webkit-border-radius: 6px;
+		 -moz-border-radius: 6px;
+					border-radius: 6px;
+}
+.jumbotron .btn-large small {
+	font-size: 14px;
+}
+
+/* Masthead (docs home) */
+.masthead {
+	padding-top: 36px;
+	margin-bottom: 72px;
+}
+
+.masthead h1,
+.masthead p {
+	text-align: center;
+}
+
+.masthead h1 {
+	margin-bottom: 18px;
+}
+
+.masthead p {
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 30px;
+	line-height: 36px;
+}
+
+input.input-xxlarge {
+	font-size: 28px;
+	min-height: 30px;
+}
+
+.input-prepend .add-on, .input-append .add-on {
+	padding: 10px;
+}
+
+#response {
+	display: none;
+	margin: 0 auto;
+	width: 940px;
+}
+
+.alert, .alert p {
+	/*display: none;*/
+	font-size: 18px;
+	line-height: 26px;
+}
+
+.alert { 
+	padding: 12px;
+}
+
+.progress, .progress .bar {
+	height: 25px;
+}
+
+.progress {
+	position: relative;
+
+}
+
+.progress .bar {
+	border-radius: 4px 0 0 4px;
+	position: absolute;
+	transition: width 0.3s ease;
+	-moz-transition: width 0.3s ease;
+	-ms-transition: width 0.3s ease;
+	-o-transition: width 0.3s ease;
+	-webkit-transition: width 0.3s ease;
+}
+
+.progress .bar.right {
+	border-radius: 0 4px 4px 0;
+	right: 0;
+}
+
+.progress .bar.done {
+	transition: width: 0.6s ease;
+	-moz-transition: width: 0.6s ease;
+	-ms-transition: width: 0.6s ease;
+	-o-transition: width: 0.6s ease;
+	-webkit-transition: width: 0.6s ease;
+}
+
+#results {
+	display: none;
+	text-align: center;
+}
+
+#test {
+	margin-top: 20px;
+}

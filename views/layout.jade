@@ -1,0 +1,50 @@
+- dev = settings && settings.mode === "development"
+!!! 5
+html
+	head
+		base(href=settings.url)
+		meta(charset="utf-8")
+		meta(description=settings.description)
+		meta(name="author", content=settings.author)
+		title=settings.title
+
+		if dev
+			link(rel="stylesheet", href="stylesheets/bootstrap.css")
+		else
+			link(rel="stylesheet", href="stylesheets/bootstrap.min.css")
+
+		link(rel="stylesheet", href="stylesheets/custom.css")
+
+		if dev
+			script(type="text/javascript", src="javascripts/jquery.js")
+			script(type="text/javascript", src="javascripts/bootstrap.js")
+		else
+			script(type="text/javascript", src=settings.jQueryCdnUrl)
+			script(type="text/javascript", src="javascripts/bootstrap.min.js")
+			script(type="text/javascript")
+				var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', '#{settings.gaAccount}']);
+				_gaq.push(['_setDomainName', '#{settings.gaDomain}']);
+				_gaq.push(['_trackPageview']);
+
+				(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				})();
+
+		if typeof home !== "undefined"
+			script(type="text/javascript", src="javascripts/custom.js")
+
+	body
+		.navbar.navbar-fixed-top
+			.navbar-inner
+				.container
+					a.brand(href="http://meloncholy.com") meloncholy
+					.nav-collapse
+						ul.nav
+							li
+								a(href="http://meloncholy.com/contact/") Contact
+
+		.container
+			!= body

@@ -1,0 +1,27 @@
+header.jumbotron.masthead
+	h1 MixCloud RSS thingy
+	p.lead Want an RSS feed for a MixCloud account? I did too, so I made this. 
+	p
+		input#mixcloud-profile.input-xxlarge(type="text", data-title="MixCloud profile URL or profile name", data-delay={ show: 500, hide: 0 })
+		a#submit.btn.btn-primary.btn-large(href="#") Gimme
+
+#response
+	#busy.progress.progress-striped.active
+		#progress-bar.bar
+
+	#alert-success.alert.alert-success 
+		p Yay! It worked! The RSS URL you want is in the box below. Just to prove it works, here&rsquo;s the latest Cloudcast from 
+	#results
+		.input-append
+			input#mixcloud-url.input-xxlarge(type="text")
+			span.add-on Your magic URL
+		#test.well
+
+	#alert-error.alert.alert-error 
+		p Hm. Something&rsquo;s gone wrong. It could be there&rsquo;s a problem with my site or that MixCloud&rsquo;s down, or (most probably) you&rsquo;ve found a bug. 
+		p I suggest entering the MixCloud profile info again to see if that fixes it. If it doesn&rsquo;t, please 
+			a(href="http://meloncholy/contact/") send me a message
+			| , making sure to include the exact text you put in the textbox so I can look into it for you. Sorry about that.
+
+	#alert-bad-user.alert
+		p I&rsquo;m afraid I don&rsquo;t understand the profile you entered. Please paste MixCloud profile&rsquo;s URL or type the username into the box above and hit &lsquo;Gimme&rsquo; again.

@@ -1,0 +1,19 @@
+{
+  "name": "mixcloud-rss",
+  "description": "MixCloud to RSS converter.",
+  "version": "0.1.0",
+  "author": "Andrew Weeks <andrew@meloncholy.com>",
+  "dependencies": {
+    "express": ">= 2.5.x",
+    "jade": ">= 0.25.0",
+    "konphyg": ">= 1.0.5",
+    "oembed": ">= 0.1.0",
+    "rss": ">= 0.0.3"
+  },
+  "keywords": ["mixcloud", "rss", "oembed", "feed"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/meloncholy/mixcloud-rss.git"
+  },
+  "main": "index"
+}

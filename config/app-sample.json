@@ -1,0 +1,14 @@
+{
+	"mode": "development",
+	"localPort": 3000,
+	"url": "http://bits.meloncholy.com/mixcloud-rss/",
+	"title": "MixCloud to RSS converter",
+	"author": "Andrew Weeks",
+	"description": "Get an RSS feed for your (or anyone else's) Mixcloud mixes and podcasts.",
+	"rssDescription": "Visit %user's profile on MixCloud. Listen to their recent and most popular Cloudcasts. It's free and really easy to use. MixCloud to RSS converter hacked together by Andrew Weeks. http://meloncholy.com",
+	"cloudcastStreamUrl": "http://api.mixcloud.com/%user/cloudcasts/",
+	"cloudcastOembedUrl": "http://www.mixcloud.com/oembed/?url=http%3A//www.mixcloud.com%cloudcast&format=json",
+	"jQueryCdnUrl": "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js",
+	"gaAccount": "UA-XXXXXXXX-X",
+	"gaDomain": "meloncholy.com"
+}
