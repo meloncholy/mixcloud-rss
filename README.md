@@ -1,4 +1,7 @@
-**[MixCloud RSS Converter](http://bits.meloncholy.com/mixcloud-rss) live link**
+MixCloud RSS Converter
+======================
+
+[Try the MixCloud to RSS converter here](http://bits.meloncholy.com/mixcloud-rss) (feel free to use the RSS feeds too, as I intend to keep it running).
 
 While it [used to](http://feedback.mixcloud.com/forums/3043-general/suggestions/1922671-loss-of-user-mixes-rss), MixCloud doesn't offer RSS feeds anymore. So I decided to write one.
 
