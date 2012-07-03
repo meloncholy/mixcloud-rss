@@ -28,12 +28,12 @@ $(function () {
 		var user = $("#mixcloud-profile").val().replace(/.*mixcloud\.com\/([^\/]+)\/?.*/i, "$1");
 
 		if (user === "") {
-			return;
+			return false;
 		} else if (user.indexOf("/") !== -1) {
 			$(".alert, #results").fadeOut(250);
 			$("#alert-bad-user").show();
 			$("#response").fadeIn(250);
-			return;
+			return false;
 		}
 
 		$("#response").fadeIn(250);
