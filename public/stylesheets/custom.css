@@ -70,11 +70,24 @@ body {
 
 input.input-xxlarge {
 	font-size: 28px;
-	min-height: 30px;
+	min-height: 32px;
+}
+
+input.input-xxlarge::-webkit-input-placeholder {
+	color: #ddd;
+	padding: 7px 0;
+}
+
+input.input-xxlarge:-moz-placeholder {
+	color: #ddd;
+}
+
+input.input-xxlarge:-ms-input-placeholder {
+	color: #ddd;
 }
 
 .input-prepend .add-on, .input-append .add-on {
-	padding: 10px;
+	padding: 11px;
 }
 
 #response {
