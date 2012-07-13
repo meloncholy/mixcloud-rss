@@ -8,11 +8,21 @@
 * @version    0.1.0
 */
 
+/*
+ * Quite a bit of this was taken from the Twitter Bootstrap demo pages.
+ *
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Copyright 2012 Twitter, Inc
+ */
+
 body { 
 	background-color: #fff; 
 	padding-top: 90px; 
 	position: relative; 
 }
+
 
 /* Jumbotrons
 -------------------------------------------------- */
@@ -71,6 +81,10 @@ body {
 input.input-xxlarge {
 	font-size: 28px;
 	min-height: 32px;
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
 }
 
 input.input-xxlarge::-webkit-input-placeholder {
@@ -86,6 +100,10 @@ input.input-xxlarge:-ms-input-placeholder {
 	color: #ddd;
 }
 
+#mixcloud-url {
+	font-size: 24px;
+}
+
 .input-prepend .add-on, .input-append .add-on {
 	padding: 11px;
 }
@@ -95,6 +113,7 @@ input.input-xxlarge:-ms-input-placeholder {
 	margin: 0 auto;
 	width: 940px;
 }
+
 
 .alert, .alert p {
 	/*display: none;*/
@@ -145,4 +164,24 @@ input.input-xxlarge:-ms-input-placeholder {
 
 #test {
 	margin-top: 20px;
+}
+
+@media (max-width: 979px) {
+	.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+		padding: 0px;
+	}
+
+	.navbar-fixed-top {
+		position: fixed;
+	}
+
+	#response {
+		width: auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar-fixed-top, .navbar-fixed-bottom {
+		margin: 0;
+	}
 }

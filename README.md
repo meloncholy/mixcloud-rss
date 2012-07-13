@@ -1,15 +1,17 @@
 MixCloud RSS Converter
 ======================
 
-[Try the MixCloud to RSS converter here](http://bits.meloncholy.com/mixcloud-rss) (feel free to use the RSS feeds too, as I intend to keep it running).
+_[Use or try the MixCloud to RSS converter here](http://bits.meloncholy.com/mixcloud-rss) (and subscribe the feeds too if you want)._
 
-While it [used to](http://feedback.mixcloud.com/forums/3043-general/suggestions/1922671-loss-of-user-mixes-rss), MixCloud doesn't offer RSS feeds anymore. So I decided to write one.
+While it [used to](http://feedback.mixcloud.com/forums/3043-general/suggestions/1922671-loss-of-user-mixes-rss), MixCloud unfortunately doesn't offer RSS feeds anymore. So I decided to add them back. 
 
-MixCloud has [an API](http://www.mixcloud.com/developers/documentation) that gave me a stream of recent uploads, which I could the use to get an embedded music player for each post via their eEmbed API. 
+MixCloud has [an API](http://www.mixcloud.com/developers/documentation) that gives a stream of recent uploads, so used this to get an embedded music player for each post via their oEmbed API. 
 
 You can see the [code in action here](http://bits.meloncholy.com/mixcloud-rss) (feel free to use the feeds too), and there's a [sample WordPress page here](http://www.breakzdjs.com/category/music/) that syndicates feeds from a number of MixCloud (and SoundCloud) accounts. 
 
-I really am standing on the shoulders of giants here as this required almost no code on my part (maybe 300 lines) thanks to the [node-oembed](https://github.com/astro/node-oembed) and [node-rss](https://github.com/dylang/node-rss) modules from Stephan Maka and Dylan Greene, and of course Node.js. 
+I really am standing on the shoulders of giants here as this required almost no code on my part (maybe 300 lines) thanks to the MixCloud API, the [node-oembed](https://github.com/astro/node-oembed) and [node-rss](https://github.com/dylang/node-rss) modules from Stephan Maka and Dylan Greene, and of course Express, Jade and Node.js. 
+
+If you want to read a more verbose version of this introduction (though I don't think there's much extra insight), you can do that [here](http://meloncholy.com/blog/mixcloud-rss-converter-in-node-js/).
 
 
 Settings
@@ -68,3 +70,9 @@ Legal fun
 Copyright &copy; 2012 Andrew Weeks http://meloncholy.com
 
 MixCloud RSS Converter is licensed under the [MIT licence](http://meloncholy.com/licence/).
+
+
+Me
+--
+
+I have a [website](http://meloncholy.com) and a [Twitter](https://twitter.com/meloncholy). Please come and say hi if you'd like or if something's not working; be lovely to hear from you. 
