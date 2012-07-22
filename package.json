@@ -1,7 +1,7 @@
 {
   "name": "mixcloud-rss",
   "description": "MixCloud to RSS converter.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Andrew Weeks <andrew@meloncholy.com>",
   "dependencies": {
     "express": ">= 2.5.x",

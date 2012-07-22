@@ -5,7 +5,7 @@
 * @subpackage routes.feed
 * @copyright  Copyright (c) 2012 Andrew Weeks http://meloncholy.com
 * @license    MIT licence. See http://meloncholy.com/licence for details.
-* @version    0.1.0
+* @version    0.1.1
 */
 
 "use strict";
@@ -62,11 +62,15 @@ var feed = function () {
 			author: author
 		});
 
-		// Each post has to be requested separately.
-		for (var i = 0, len = cloudcasts.length; i < len; i++) {
-			(function (cloudcast) {
-				oembed.fetchJSON(cloudcastUrl.replace("%cloudcast", cloudcast.key), function (error, result) { renderFeed(stuff, { url: cloudcast.url, date: new Date(cloudcast.created_time) }, error, result); });
-			})(cloudcasts[i]);
+		if (cloudcasts.length === 0) {
+			renderFeed(stuff);
+		} else {
+			// Each post has to be requested separately.
+			for (var i = 0, len = cloudcasts.length; i < len; i++) {
+				(function (cloudcast) {
+					oembed.fetchJSON(cloudcastUrl.replace("%cloudcast", cloudcast.key), function (error, result) { renderFeed(stuff, { url: cloudcast.url, date: new Date(cloudcast.created_time) }, error, result); });
+				})(cloudcasts[i]);
+			}
 		}
 	}
 
@@ -82,19 +86,22 @@ var feed = function () {
 			return;
 		}
 
-		// Add post to feed.
-		stuff.feed.item({
-			title: sanitize(result.title).xss(),
-			description: result.html,
-			url: info.url,
-			author: result.author_name,
-			date: info.date
-		});
-		// Got all Cloudcasts yet?
-		if (++stuff.count < stuff.length) return;
+		if (stuff.length > 0) {
+			// Add post to feed.
+			stuff.feed.item({
+				title: sanitize(result.title).xss(),
+				description: result.html,
+				url: info.url,
+				author: result.author_name,
+				date: info.date
+			});
+			// Got all Cloudcasts yet?
+			if (++stuff.count < stuff.length) return;
 
-		// Sort (as requests may return out of order) and render.
-		stuff.feed.items.sort(function (a, b) { return b.date - a.date; });
+			// Sort (as requests may return out of order) and render.
+			stuff.feed.items.sort(function (a, b) { return b.date - a.date; });
+		}
+
 		stuff.res.render("feed", { xml: stuff.feed.xml("\t"), layout: false });
 	}
 

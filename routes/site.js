@@ -5,7 +5,7 @@
 * @subpackage routes.site
 * @copyright  Copyright (c) 2012 Andrew Weeks http://meloncholy.com
 * @license    MIT licence. See http://meloncholy.com/licence for details.
-* @version    0.1.0
+* @version    0.1.1
 */
 
 "use strict";
