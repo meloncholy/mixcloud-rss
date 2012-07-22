@@ -5,7 +5,7 @@ _[Use or try the MixCloud to RSS converter here](http://bits.meloncholy.com/mixc
 
 While it [used to](http://feedback.mixcloud.com/forums/3043-general/suggestions/1922671-loss-of-user-mixes-rss), MixCloud unfortunately doesn't offer RSS feeds anymore. So I decided to add them back. 
 
-MixCloud has [an API](http://www.mixcloud.com/developers/documentation) that gives a stream of recent uploads, so used this to get an embedded music player for each post via their oEmbed API. 
+MixCloud has [an API](http://www.mixcloud.com/developers/documentation) that gives a stream of recent uploads, so I used this to get an embedded music player for each post via their oEmbed API. 
 
 You can see the [code in action here](http://bits.meloncholy.com/mixcloud-rss) (feel free to use the feeds too), and there's a [sample WordPress page here](http://www.breakzdjs.com/category/music/) that syndicates feeds from a number of MixCloud (and SoundCloud) accounts. 
 
