@@ -3,9 +3,9 @@
 *
 * @package    MixCloudRSS
 * @subpackage routes.feed
-* @copyright  Copyright (c) 2012 Andrew Weeks http://meloncholy.com
+* @copyright  Copyright (c) 2012, 2013 Andrew Weeks http://meloncholy.com
 * @license    MIT licence. See http://meloncholy.com/licence for details.
-* @version    0.1.1
+* @version    0.2.0
 */
 
 "use strict";
@@ -16,7 +16,7 @@ var sanitize = require("validator").sanitize;
 
 var feed = function () {
 	var exports = {};
-	var settings = global.mcSettings.app;
+	var config = global.app.config;
 
 
 	// Build RSS feed. Start by requesting user stream.

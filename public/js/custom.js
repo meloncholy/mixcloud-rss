@@ -78,3 +78,7 @@ $(function () {
 		}, 50);
 	}
 });
+
+
+// What&rsquo;s hot right now
+// <!-- http://api.mixcloud.com/popular/hot/ -->

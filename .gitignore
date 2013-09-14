@@ -20,7 +20,11 @@ Stuff
 app.json
 app josie.json
 
+// Sublime
 *.sublime-project
 *.sublime-workspace
+
+// WebStorm
+.idea
 
 notes.txt

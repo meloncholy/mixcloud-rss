@@ -1,0 +1,49 @@
+{!
+	http://getbootstrap.com/examples/carousel/
+	http://getbootstrap.com/examples/navbar-fixed-top/
+!}
+
+<header class="jumbotron masthead">
+	<h1>MixCloud RSS thingy</h1>
+	<p class="lead">Want an RSS feed for a MixCloud account? I did too, so I made this.</p>
+	<p>
+		<input id="mixcloud-profile" class="input-xxlarge" type="text" placeholder="MixCloud URL" data-title="MixCloud profile URL or profile name" data-delay="{ show: 500, hide: 0 }" />
+		<a id="submit" class="btn btn-primary btn-large" href="#">Gimme</a>
+	</p>
+</header>
+
+<div id="response">
+	<div id="busy" class="progress progress-striped active">
+		<div id="progress-bar" class="bar"></div>
+	</div>
+
+	<div id="alert-success" class="alert alert-success">
+		Yay! The RSS URL you want is in the box below. Just to prove it works, here&rsquo;s the latest Cloudcast from
+
+		<div id="results">
+			<div class="input-append">
+				<input id="mixcloud-url" class="input-xxlarge" type="text" />
+				<span class="add-on">Your magic URL</span>
+			</div>
+
+			<div id="test" class="well"></div>
+		</div>
+	</div>
+
+	<div id="alert-not-found" class="alert">Sorry, that account doesn&rsquo;t seem to exist. Could you check you&rsquo;ve got it right?</div>
+
+	<div id="alert-error" class="alert alert-error">
+		<p>
+			Hm. Something&rsquo;s gone wrong. It could be there&rsquo;s a problem with my site or that MixCloud&rsquo;s down, or (most probably) you&rsquo;ve found a bug.
+		</p>
+
+		<p>
+			I suggest entering the MixCloud profile info again to see if that fixes it. If it doesn&rsquo;t, please <a href="http://meloncholy/contact/">send me a message</a>,
+			making sure to include the exact text you put in the textbox so I can look into it for you. Sorry about that.
+		</p>
+	</div>
+
+	<div id="alert-bad-user" class="alert">
+		I&rsquo;m afraid I don&rsquo;t understand the profile you entered. Please paste MixCloud profile&rsquo;s URL or type the username into the box above and try again.
+	</div>
+</div>
